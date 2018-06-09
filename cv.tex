@@ -1,0 +1,378 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customized Twenty Seconds CV
+%   --> French
+% LaTeX Template
+% Version 2.0 (03/05/18)
+%
+% Author: Guillaume Garcia
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------------------------------------------------------------------------
+%                                                   TIPS
+%-----------------------------------------------------------------------------------------------------------
+%
+%   - Pour ne pas afficher une commande/un élément il suffit de commenter la ligne correspondante avec "%"
+%   - Ajouter un espacement verticale : \vspace{ymm} avec y un entier > 0 (millimètres)
+%   - Réduire un espacement verticale : \vspace{-ymm} avec y un entier > 0 (millimètres)
+%   - Ajouter/réduire un espacement horizontale :  \hspace{xmm} avec x un entier > 0 ou < 0 (millimètres)
+%   - Italique = \textit{}
+%   - Gras = \textbf{}
+%   - Souligné = \underline{}
+%   - Mettre de la couleur = \color{colorname} où colorname est dans twentysecondcv.cls sous COLOURS
+%   - Si nécessité de changer la forme "profonde", la modifier dans le fichier twentysecondcv.cls
+%
+%-----------------------------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TODO :
+%       - Références [optionnel]
+%       -
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%                           PACKAGES AND OTHER DOCUMENT CONFIGURATIONS                                     %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+\usepackage{pxfonts}                        % Pretty arrows
+
+%-----------------------------------------------------------------------------------------------------------
+%                       END OF PACKAGES AND OTHER DOCUMENT CONFIGURATIONS 
+%-----------------------------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%            USER COMMANDS (partie gauche) :  Compétences / Programmation / Langues / Qualités             %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Compétences %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{~~Ingénierie~~}\\\textbf{~~embarquée~~},
+        \textbf{~~~~IA~~~~},
+        \textbf{~Logiciels~}\\\textbf{~Embarqués~}\vspace{1mm},
+        \textbf{Dev}\\\textbf{Mobile},
+        \textbf{Traitement}\\\textbf{du Signal},
+        %\textbf{Traitement}\\\textbf{de l'image},
+        \textbf{Sûreté},
+        \textbf{~~~Agilité~~~}\\\textbf{~~~Scrum~~~},
+        \textbf{Temps}\\\textbf{réel}\vspace{-1.5mm},
+        \textbf{Électronique}
+    }
+} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Programmation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation / score de la barre de progression (MAX = 6)
+\newcommand\maitrise{5.5} 
+\newcommand\intermediaireHaut{4.5}
+\newcommand\intermediaireBas{3.5}
+\programming{{Assembleur $\textbullet$ Basic$\textbullet$ VHDL / \intermediaireBas},
+{C++ $\textbullet$ Matlab $\textbullet$ Qt $\textbullet$ Arduino/ \intermediaireHaut},
+{Java $\textbullet$ C $\textbullet$ Python $\textbullet$ Shell $\textbullet$ \large{ \LaTeX } / \maitrise}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Langues %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\languages{
+~   
+    \vspace{1mm} % Inter-espace
+    \textbf{\large{Anglais}}\includegraphics[scale=0.40]{img/4stars.png} $\rightsquigarrow\textit{\textbf{TOEIC} - niv. B2}$\\
+    \textbf{\large{Espagnol}}\includegraphics[scale=0.40]{img/3stars.png} $\rightsquigarrow\textit{estimé niv. B1}$\\
+}   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Qualités %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\personalskills{
+\vspace{2.5mm}
+$\circleddotright\textbf{ Bienveillant}$\vspace{.5mm} \hspace{1.6mm}
+$\circleddotright\textbf{ Pragmatique}$\vspace{.5mm}\\
+$\circleddotright\textbf{ Dynamique}$\vspace{.5mm} \hspace{2.2mm}
+$\circleddotright\textbf{ Persévérant}$\vspace{.5mm}\\
+
+%%% Format:
+%$\circleddotright\textbf{ Blabla}$\vspace{.5mm}\\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% OS préférés %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand\preferedos{ 
+        %\textbf{GNU/Linux}\includegraphics[scale=0.40]{img/5stars.png}\\
+        %\textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}\\
+        %\textbf{MacOS}\includegraphics[scale=0.40]{img/3stars.png}\\
+%}
+
+%-----------------------------------------------------------------------------------------------------------
+%                               END OF USER COMMANDS
+%-----------------------------------------------------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%     INFORMATIONS PERSO : Nom Prénom / Titre / Disponibilités / Mobilité / Nationalité / Âge / Permis     %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Format : espacement vertical entre les éléments (mm)
+\newcommand\infovspace{\vspace{-2mm}}
+%%%%%%%
+%%%%%%% Format : Ligne séparatrice
+\newcommand\simpleline{\rule[0.25\baselineskip]{6cm}{1pt}}
+%%%%%%%
+
+% Prénom NOM
+\cvname{\huge{Guillaume GARCIA}}
+
+%%%% DÉBUT : Titre + infos diverses
+\cvjobtitle{
+
+% Titre & Recherche
+\large{\color{mainblue}\textbf{Élève ingénieur du numérique}}\vspace{1mm}\\
+\normalsize{\color{mainblue}{\textit{Recherche une opportunité Ingénieur \\Développement Logiciel Embarqué}}}\\
+\simpleline
+
+% Disponibilités
+\infovspace$\Diamonddotright$
+\textnormal{\normalsize{ Disponible dès le \textbf{
+                                                        01/10/2018
+                                                }}}
+
+% Mobilité
+\infovspace
+$\Diamonddotright$\normalsize{ \textbf{ Mobilité} :\newline
+\textit{France-Espagne-Lux-Belgique-Suisse}}\\
+\simpleline
+
+% Nationalité
+\infovspace$\Diamonddotright$ 
+\normalsize{\textit{ Nationalité Française}
+
+% Âge
+\infovspace$\Diamonddotright$
+\textit{ 24 ans}
+
+% Permis
+\infovspace$\Diamonddotright$ 
+\textit{ Permis B - Véhiculé}}\\
+\simpleline
+\infovspace
+
+} %%%% FIN : Titre + infos diverses
+
+% eMail
+\infovspace
+\cvmail{guillaume.garcia@telecomnancy.net} 
+
+% LinkedIn
+\infovspace
+\cvlinkedin{/in/garcia-guillaume}
+
+% GitHub
+\infovspace
+\cvgithub{AOSauron}
+
+% Numéro de Téléphone
+\infovspace
+\cvnumberphone{(+33) 6 03 99 10 66}
+
+% Adresse OU site internet perso
+\infovspace
+\cvsite{95320 Saint-Leu-La-Forêt - France}
+
+
+%-----------------------------------------------------------------------------------------------------------
+%                                  END OF PERSONNAL INFORMATIONS
+%-----------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the leftsidebar
+
+\vspace{-0.40cm} % Mise en forme
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%                                           FORMATION                                                      %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Formation}
+\vspace{-0.1cm}
+\begin{twenty}  
+
+    % FORMAT POUR UNE FORMATION : \twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+    
+	\twentyitem
+    	{2015 - 2018}
+        {}
+        {Cycle ingénieur informatique \textnormal{ \textit{Logiciel Embarqué}}\\\textnormal{ \textit{ Diplôme attendu fin 2018}}}
+        {\\\textbf{TELECOM Nancy}, Université de Lorraine, Villers-lès-Nancy 54600, Lorraine}
+        {}
+        {}
+	\twentyitem
+    	{2014 - 2015}
+		{}
+        {Classe préparatoire MP 5/2 \textnormal{\textit{ Maths \& Physique}}}
+        {\\Lycée Jacques Decour, Paris 75009, Île-de-France}
+        {}
+        {}
+	\twentyitem
+    	{2012 - 2014}
+		{}
+        {Classes préparatoires MPSI puis MP \textnormal{\textit{ Maths \& Physique}}}
+        {\\Lycée Gustave Monod, Enghien-les-bains 95880, Île-de-France}
+        {}
+        {}
+	\twentyitem
+    	{2009 - 2012}
+		{}
+        {Baccalauréat S option SVT \textnormal{ \textit{spé physique-chimie, Mention Bien}}}
+        {\\Lycée Notre Dame de Bury, Margency 95580, France}
+        {}
+        {}
+\end{twenty}
+
+%-----------------------------------------------------------------------------------------------------------
+%                                       END OF FORMATION
+%-----------------------------------------------------------------------------------------------------------
+
+\vspace{-0.55cm} % Mise en forme
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%                                 EXPÉRIENCES PROFESSIONNELLES                                             %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Expériences professionnelles}
+\vspace{-0.25cm}
+
+\begin{twenty}
+
+    % FORMAT POUR UNE EXPERIENCE : \twentyitem{<dates>}{<title>}{<location>}{<description>}
+    
+    \twentyitem
+    	{Avril 2018}
+		{$\DiamonddotRight$\textit{\small{ 6 mois}}}
+        {Stage ingénieur informatique}
+        {\href{https://www.thalesgroup.com/fr/worldwide/defense/practical-information}{\includegraphics[scale=0.35]{img/thales-logo.png} \hspace{0.5cm} (92230)}}
+        {}
+        {\vspace{-0.20cm}
+            \begin{itemize}
+                \item Spécifier, développer et qualifier un \textit{simulateur de trajectoires}.% dans le cadre du développement d'un radar secondaire nouvelle génération (à panneaux fixes).
+                \item Développement AGILE en deux parties (\textbf{moteur} \& \textbf{IHM}) du simulateur dont le but est de tester les algorithmes de pistages d'un radar secondaire nouvelle génération. (IHM \textbf{Python 2}, moteur en \textbf{C}, \textbf{AGILE/Scrum})
+            \end{itemize}
+            \vspace{-0.20cm}
+        }
+        \\
+    \twentyitem
+    	{Juin 2017}
+		{$\Diamonddotright$\textit{\small{ 2 mois}}}
+        {Stage technicien informatique}
+        {\href{https://www.thalesgroup.com/fr/worldwide/defense/practical-information}{\includegraphics[scale=0.35]{img/thales-logo.png} \hspace{0.5cm} (92230)}}
+        {}
+        {\vspace{-0.20cm}
+            \begin{itemize}
+                \item Projet \textit{Code Beautifier} : Outil de vérification et formatage de règles de codage, fourni avec 2 crochets \textbf{git}. (\textbf{Python 2}, \textbf{JSON} et \textbf{YAML})
+            \end{itemize}
+            \vspace{-0.20cm}
+        }
+        \\
+    %\vspace{-0.1cm}
+	\twentyitem
+    	{Juil 2016}
+    	{$\Diamonddotright$\textit{\small{ 1 mois}}}
+        {Employé des services techniques}
+        {\href{http://www.saint-leu-la-foret.fr/}{\includegraphics[scale=0.18]{img/saint-leu-la-foret.png} \hspace{0.5cm} (95320)}}
+        {}
+        {\vspace{-0.20cm}
+            {\begin{itemize}
+                \item Plomberie simple, peinture en bâtiment, déménagement de matériel, peinture routière, réparation diverses, en équipe de 3.
+            \end{itemize}}
+            \vspace{-0.20cm}
+        }
+    \\   
+    \twentyitem
+   		{Juil 2014}
+		{$\Diamonddotright$\textit{\small{ 2 mois}}}
+        {Employé commercial}
+        {\href{http://www.cora.fr/ermont/}{\includegraphics[scale=0.05]{img/Logo_cora_2011.png} \hspace{0.5cm}(95120)}}
+        {}
+        {\vspace{-0.20cm}
+            \begin{itemize}
+                \item Manutention de produits commerciaux, \textit{facing} des rayons d'hypermarché.
+            \end{itemize}
+            %\vspace{-0.10cm}
+        }
+\end{twenty}\\
+
+%-----------------------------------------------------------------------------------------------------------
+%                               END OF EXPÉRIENCES PROFESSIONNELLES
+%-----------------------------------------------------------------------------------------------------------
+
+\vspace{-0.1cm} % Mise en forme
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%                                    PROJETS PERSO & SCOLAIRES                                             %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Projets scolaires et personnels}
+\vspace{-0.15cm}
+
+\begin{itemize}
+
+    % FORMAT USUEL POUR PROJET : \textbf{projectname} - explanation(s)
+    
+    \item \textbf{Linux embarqué} $\rightsquigarrow$ {Développement de \textbf{drivers} pour sonar de proximité et afficheur 7-segments à 3 digits pour un Debian embarqué sur une carte iMX233-OLinuXin-MAXI. (\textbf{ARM, GPIOs, C Noyau, Electronique embarquée})}
+    \item \textbf{Projet Industriel 2017} $\rightsquigarrow$ \textit{(\textbf{Chef de Projet} - projet sur 6 mois)} Boîtier connecté au bus CAN d’une voiture afin d’en effectuer le diagnostic en cas de panne (et envoyer ce rapport par GSM), pour le compte de la société \textit{Clarion}. (\textbf{C, Python, Réseaux, Électronique embarquée, ODBII})
+    \item \textbf{ptar} $\rightsquigarrow$ Extracteur d'archives tar et tar.gz pour les systèmes UNIX, durable et multithreadé. (\textbf{C, multi-threading})
+    \item \textbf{clooc} $\rightsquigarrow$ Compilateur produisant du langage d'assemblage. Il compile un langage orienté objet simple en assembleur simplifié. (\textbf{Java, Antlr})
+    \item \textbf{noise-sonar} $\rightsquigarrow$ Simulation d'un sonar à bruit. (\textbf{Matlab})
+    
+    % Vieux projets / moins intéressant :
+    
+    %\item \textbf{myAdblock} – Serveur proxy bloqueur de publicités, écrit en \textit{C}.
+    %\item \textbf{PIDR} - Remontée de données par boîtier Arduino relié au bus CAN d'une voiture électrique sur un serveur distant. (\textbf{C++ Arduino, Python})
+    %\item \textbf{aOS} - Projet \textit{personnel} de création d'un système Linux en suivant le livre Linux From Scratch. (\textbf{Shell, systèmes linux})
+    
+\end{itemize}
+
+%-----------------------------------------------------------------------------------------------------------
+%                                END OF PROJETS PERSO & SCOLAIRES 
+%-----------------------------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%                                           CENTRES D'INTÉRÊT                                              %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Centres d'intérêt}
+\vspace{-0.15cm}
+
+\begin{itemize}
+
+    \item Passionné par les \textbf{sciences}, en particulier l'\textit{astronomie}, la \textit{physique}, la \textit{biologie} et l'\textit{informatique}. Grand amateur de \textbf{mécanique automobile} (pratiquée sur mon propre véhicule).
+    
+    \item Apprécie les sports d'endurance notamment le {\textbf{VTT}} (pratique amateur intense en duo). Pratique du {\textbf{modélisme navale}} (4 ans en club) et de la {\textbf{pêche} en eau douce}. 
+    
+    \item Séjours réguliers en \textbf{Andalousie, Espagne} (\textit{Almería}).
+    
+    \item Amateur de \textbf{cinéma} et de \textbf{jeux vidéos} (\textit{stratégie}, \textit{RPG}) orientés \textit{science-fiction}, \textit{action}, \textit{fantastique}.
+    
+\end{itemize}
+
+%-----------------------------------------------------------------------------------------------------------
+%                                       END OF CENTRES D'INTÉRÊT
+%-----------------------------------------------------------------------------------------------------------
+
+\end{document} 
